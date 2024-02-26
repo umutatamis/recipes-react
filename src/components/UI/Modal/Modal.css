@@ -1,0 +1,136 @@
+div#custom-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.custom-modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000000b5;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.custom-modal {
+  width: 1000px;
+  position: relative;
+  background: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100%;
+}
+
+.custom-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-modal::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+.custom-modal::-webkit-scrollbar-thumb {
+  background: #222;
+}
+
+.recipe-detail-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.custom-modal-close {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 10px #00000005;
+}
+
+.recipe-detail-title {
+  font-size: 38px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.recipe-detail-duration {
+  text-align: left;
+  font-size: 15px;
+  color: #888;
+  padding-top: 2px;
+}
+
+.recipe-detail-top {
+  padding-bottom: 20px;
+}
+
+.recipe-detail-materials {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: center;
+  line-height: 150%;
+  color: #222;
+}
+
+.recipe-detail-materials strong {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.recipe-detail-materials ul li {
+  width: 20%;
+  font-size: 14px;
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.recipe-detail-materials ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .recipe-detail-title {
+    font-size: 24px;
+    line-height: 25px;
+  }
+  .custom-modal {
+    padding: 20px;
+  }
+  .recipe-detail-duration {
+    font-size: 13px;
+  }
+  .recipe-detail-materials ul li {
+    width: 50%;
+  }
+  div#custom-modal-container {
+    padding: 20px;
+  }
+}
